@@ -1,0 +1,83 @@
+o Finding the conflicted files
+  - git diff --name-only --diff-filter=U
+o Reverting a file:
+  - git checkout <commit> <filename>
+o Cloning a remote branch:
+  - git branch -r                       # shows remote branches
+  - git clone -b <remoteBranch> <URL>
+  
+o Track a remote repository:
+  - git checkout --track origin/development
+
+o Configure
+  - git config --global user.name 'Brian Marshall'
+  - git config --global user.email 'marshabp@mdnt.com'
+  - git config --global alias.unstage "reset HEAD" new Git repository
+  - git config --global --list
+  - git config --mergetool mergetoolName
+
+o Basic
+  - git init       -- creates a new Git repository
+  - git add files  -- recursively stages files to the repo
+  - git commit     -- commits staged files to the repo
+  - git status
+  - git status -s  -- short
+  - git diff            -- show unstaged changes since last commit 
+  - git diff --cached   -- show staged changes vs repo
+  - git diff HEAD       -- show staged & unstaged hanges vs repo
+
+o Branches
+  - git checkout -b myFeature origin/myFeature
+
+o Daily Modus Operandi
+  - git checkout --track origin/development  # once to track the remote development branch
+  ...
+  - git checkout development
+  - git pull
+  - git checkout brian
+  - git merge development
+  ...
+  - git commit
+
+o Fixing Merge Conflicts
+  - git mergetool : to look at the changes
+  - git checkout --ours <fileName>
+  - git checkout --theirs <fileName>
+  - git add <fileName>
+  - git commit -m 'using theirs'
+
+o Removing a branch:
+  - git branch -d <branchName>
+  - git push origin :branchToDelete  # deletes a remote branch
+
+
+git remote add guidewireOrigin https://gh.guidewire.com/bmarshall/IntegrationFramework.git
+git remote add ndi2Origin /media/dfs/COS_Shared/ndi-repos/ndi2.git/
+git remote add Origin ssh://bmarshall@192.168.1.2/home/bmarshall/workspaces/Cloud/Utitilities
+
+git config core.filemode false   -- ignore file permission changes
+git reset --hard ORIG_HEAD  -- to undo a merge 
+git reset --hard HEAD  -- reverts local changes 
+git remote -v 
+
+git checkout master
+git pull ndi2Origin master
+git checkout switchboard   -- work on this branch
+get merge master
+git commit
+
+git checkout master
+git pull ndi2Origin master
+git merge switchboard
+
+git push ndi2Origin master
+
+git remote prune origin
+
+
+Remember to update your topic branch locally:
+
+$ git pull origin master <--- origin is the default. use whatever points
+to the COS shared ndi.git repository
+$ git checkout <featureBranch> <--- must be standing on feature branch!!
+$ git rebase master
