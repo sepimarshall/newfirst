@@ -1,3 +1,11 @@
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 change
 second change
 third change
+=======
+024b3f9
+>>>>>>> Stashed changes
+=======
+024b3f9
+>>>>>>> Stashed changes
