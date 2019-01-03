@@ -1,11 +1,6 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+change
+second change
 change
 second change
 third change
-=======
-024b3f9
->>>>>>> Stashed changes
-=======
-024b3f9
->>>>>>> Stashed changes
+fourth change in test2test
