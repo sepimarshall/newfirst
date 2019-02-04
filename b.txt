@@ -1,3 +1,1 @@
-third change
-second change
-first change
+changed in test1`
